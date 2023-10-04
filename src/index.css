@@ -7,20 +7,17 @@ body {
 }
 
 .container {
-  @apply flex flex-col m-auto mt-14 md:mt-20 bg-gray-100 max-w-[90vw] md:max-w-[60vw];
+  @apply flex flex-col m-auto mt-14 md:mt-20 bg-gray-50 max-w-[90vw] md:max-w-[60vw];
 }
 
 .question {
-  @apply flex flex-col shadow-xl m-4;
+  @apply flex flex-col shadow-xl m-4 bg-gray-200;
 }
 
 .title-container {
-  @apply flex  justify-between mr-6;
+  @apply flex  justify-between mr-6 mt-2;
 }
 
-.title-container span {
-  @apply text-2xl bg-blue-800 rounded-full  text-center cursor-pointer text-white hover:bg-blue-900 duration-500 mb-4 mr-6 w-8 h-8;
-}
 .info {
-  @apply m-2;
+  @apply ml-2 mr-2 mt-2;
 }

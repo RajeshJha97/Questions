@@ -1,20 +1,18 @@
 import { useState } from 'react';
-import questions from './data';
+import data from './data';
+import Question from './Question';
 function App() {
-  const [question, setQuestion] = useState(questions[0]);
-  const [showAnswer, setShowAnswer] = useState(true);
+  const [questions, setQuestions] = useState(data);
+  const [questionId, setQuestionId] = useState(data.id);
+
   return (
     <main className='container'>
-      <section className='text-xl text-blue-950 mt-[10px] mb-[20px] text-center'>
+      <section className='text-2xl font-bold text-blue-950 mt-[10px] mb-[20px] text-center'>
         Questions
       </section>
-      <section className='question'>
-        <div className='title-container'>
-          <h1 className='ml-2'>{question.title}</h1>
-          <span>+</span>
-        </div>
-        <div className='info'>{showAnswer && <p>{question.info}</p>}</div>
-      </section>
+      {questions.map((question) => {
+        return <Question key={question.id} question={question} />;
+      })}
     </main>
   );
 }
